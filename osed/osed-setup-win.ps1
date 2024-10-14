@@ -1,5 +1,6 @@
 $share_path = "\\tsclient\setup-uwu\"
 $install_dir = "C:\Users\Offsec\Desktop\setup-uwu"
+$debugger_path = "C:\Program Files\Windows Kits\10\Debuggers\x86"
 
 # Set execution policy to allow script execution
 echo "[+] Setting execution policy"
@@ -59,11 +60,13 @@ if (Test-Path $python_installer) {
     echo "[!] Python 2.7 installer not found in $install_dir"
 }
 
-# Add Python 2.7 to the PATH if the installation directory exists
+# Add Python 2.7 and Windows Debuggers to the PATH if the directories exist
 if (Test-Path "C:\Python27") {
-    echo "[+] adding Python 2.7 to the PATH"
+    echo "[+] adding Python 2.7 and Debugger path to the PATH"
     $p = [System.Environment]::GetEnvironmentVariable('Path',[System.EnvironmentVariableTarget]::User)
-    [System.Environment]::SetEnvironmentVariable('Path',"C:\Python27\;C:\Python27\Scripts;"+$p,[System.EnvironmentVariableTarget]::User)
+    $newPath = "C:\Python27\;C:\Python27\Scripts;$debugger_path;"+$p
+    [System.Environment]::SetEnvironmentVariable('Path', $newPath, [System.EnvironmentVariableTarget]::User)
+    echo "[+] Updated PATH: $newPath"
 } else {
     echo "[!] Python 2.7 installation not found."
 }
