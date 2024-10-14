@@ -31,7 +31,7 @@ fi
 echo "[+] Once the RDP window opens, execute the following command in an Administrator cmd:"
 echo
 echo "============================================================"
-echo "powershell -c \"cat $SHARE\\install-mona-mod.ps1 | powershell -\""
+echo "powershell -c \"cat $SHARE\\osed-setup-win.ps1 | powershell -\""
 echo "============================================================"
 echo
 

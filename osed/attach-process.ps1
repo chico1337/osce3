@@ -106,7 +106,7 @@ process {
         Write-Error "Supplied -process-name $process_name not found" -ErrorAction Stop
     }
 
-    $cmd_args = "-WF C:\Users\wepad\Desktop\osed\readable-x64.wew -p $($process.id)"
+    $cmd_args = "-WF C:\Users\Offsec\Desktop\install-everything-uwu\readable-x64.wew -p $($process.id)"
     
     if ($commands) {
         $cmd_args += " -c '$commands'"

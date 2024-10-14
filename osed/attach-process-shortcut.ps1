@@ -1,6 +1,6 @@
 ﻿while ($true) {
     try {
-        .\attach-process.ps1 -process-name 'egghhunter_extra_mile' -commands '.load pykd.pyd;bp 0x66601113; g'
+        C:\Users\Offsec\Desktop\install-everything-uwu\attach-process.ps1 -process-name 'Savant' -commands '.load pykd.pyd'
     }
     catch {
         Write-Error "An error occurred: $_"

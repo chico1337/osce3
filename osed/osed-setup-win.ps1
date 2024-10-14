@@ -1,5 +1,5 @@
 $share_path = "\\tsclient\liamliam-osed-uwu\"
-$install_dir = "C:\Users\Offsec\Desktop\install-everything-uwu"
+$install_dir = "C:\Users\Offsec\Desktop\setup-uwu"
 
 # Create installation directory if it doesn't exist
 if (!(Test-Path -Path $install_dir)) {
@@ -81,5 +81,5 @@ if (Test-Path $ps1_file) {
 
 # Debug information
 echo "[=] In case you see something about symbols when running mona, try executing the following:"
-echo "regsvr32 "C:\Program Files\Common Files\Microsoft Shared\VC\msdia90.dll""
+echo 'regsvr32 "C:\Program Files\Common Files\Microsoft Shared\VC\msdia90.dll"'
 
