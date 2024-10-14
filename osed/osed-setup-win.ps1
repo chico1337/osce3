@@ -1,4 +1,4 @@
-$share_path = "\\tsclient\liamliam-osed-uwu\"
+$share_path = "\\tsclient\setup-uwu\"
 $install_dir = "C:\Users\Offsec\Desktop\setup-uwu"
 
 # Set execution policy to allow script execution

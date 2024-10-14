@@ -2,7 +2,7 @@
 
 # Temporary directory and share setup
 TMPDIR=$(mktemp -d)
-SHARENAME="liamliam-osed-uwu"
+SHARENAME="setup-uwu"
 SHARE="\\\\tsclient\\$SHARENAME"
 
 # Hardcoded RDP credentials
@@ -37,7 +37,7 @@ echo
 
 # Use rdesktop to connect, passing in the provided IP address and hardcoded credentials
 # Redirect stdout to /dev/null but keep stderr for errors, run in background using "&"
-rdesktop ${IP} -u "$RDP_USER" -p "$RDP_PASS" -r disk:$SHARENAME=$TMPDIR/osce3/osed/ >/dev/null 2>&1 &
+rdesktop ${IP} -u "$RDP_USER" -p "$RDP_PASS" -r disk:$SHARENAME=$TMPDIR/osce3/osed/ &
 
 # Inform the user that the SMB share will remain attached
 echo "[+] The SMB share is mounted at $TMPDIR and will remain attached."
