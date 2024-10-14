@@ -1,6 +1,10 @@
 $share_path = "\\tsclient\liamliam-osed-uwu\"
 $install_dir = "C:\Users\Offsec\Desktop\setup-uwu"
 
+# Set execution policy to allow script execution
+echo "[+] Setting execution policy"
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
 # Create installation directory if it doesn't exist
 if (!(Test-Path -Path $install_dir)) {
     echo "[+] creating installation directory: $install_dir"
@@ -73,8 +77,8 @@ Copy-Item -Path "$install_dir\pykd.pyd" -Destination "$pykd_dir" -Force
 # Launch PowerShell ISE to edit the attach-process-shortcut.ps1 file
 $ps1_file = "$install_dir\attach-process-shortcut.ps1"
 if (Test-Path $ps1_file) {
-    echo "[+] All tasks completed, launching PowerShell ISE to edit $ps1_file"
-    Start-Process powershell_ise.exe -ArgumentList $ps1_file
+    echo "[+] All tasks completed, launching PowerShell ISE as administrator to edit $ps1_file"
+    Start-Process powershell_ise.exe -ArgumentList $ps1_file -Verb RunAs
 } else {
     echo "[!] attach-process-shortcut.ps1 not found in $install_dir."
 }

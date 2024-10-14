@@ -1,4 +1,4 @@
-﻿<#
+<#
 .PARAMETER service_name
     Service to restart (optional)
 .PARAMETER path
@@ -106,7 +106,7 @@ process {
         Write-Error "Supplied -process-name $process_name not found" -ErrorAction Stop
     }
 
-    $cmd_args = "-WF C:\Users\Offsec\Desktop\install-everything-uwu\readable-x64.wew -p $($process.id)"
+    $cmd_args = "-WF C:\Users\Offsec\Desktop\setup-uwu\readable-x64.wew -p $($process.id)"
     
     if ($commands) {
         $cmd_args += " -c '$commands'"
@@ -115,7 +115,7 @@ process {
     }
     
     write-host "[+] Attaching to $process_name"
-    start-process -wait -filepath "C:\Program Files (x86)\Windows Kits\10\Debuggers\x86\windbg.exe" -verb RunAs -argumentlist $cmd_args
+    start-process -wait -filepath "C:\Program Files\Windows Kits\10\Debuggers\x86\windbg.exe" -verb RunAs -argumentlist $cmd_args
    
     if ($service_name) {
         Do {
@@ -131,4 +131,5 @@ process {
         Until ($svc.status -eq 'Running')
     }
 }
+
 
