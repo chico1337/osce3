@@ -106,7 +106,7 @@ process {
         Write-Error "Supplied -process-name $process_name not found" -ErrorAction Stop
     }
 
-    $cmd_args = "-WF C:\Users\Offsec\Desktop\setup-uwu\dark.wew -p $($process.id)"
+    $cmd_args = "-WF C:\Users\Offsec\Desktop\setup-uwu\windbg-dark-green-x64.wew -p $($process.id)"
     
     if ($commands) {
         $cmd_args += " -c '$commands'"
