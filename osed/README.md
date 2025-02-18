@@ -1,3 +1,72 @@
+# Quickstart local VM
+On Kali
+```
+git clone https://github.com/chico1337/osce3.git; cd osce3/osed; chmod +x ./osed-setup-local.sh
+[+] Once SMB is mounted, run the following script on your windows VM in an administrator cmd n follow the instructions:
+
+============================================================
+powershell -c "cat \\192.168.219.128\setup-uwu\osed-setup-win-local.ps1 | powershell -"
+============================================================
+
+[+] Mounting SMB share in current dir
+```
+
+
+
+# Quickstart exam
+
+On Kali
+```
+git clone https://github.com/chico1337/osce3.git; cd osce3/osed; chmod +x ./osed-setup.sh
+```
+Results
+```
+./osed-setup.sh $IP
+[=] Cloning repository https://github.com/chico1337/osce3.git
+Cloning into 'osce3'...
+remote: Enumerating objects: 104, done.
+remote: Counting objects: 100% (104/104), done.
+remote: Compressing objects: 100% (67/67), done.
+remote: Total 104 (delta 41), reused 67 (delta 22), pack-reused 0 (from 0)
+Receiving objects: 100% (104/104), 24.11 MiB | 11.92 MiB/s, done.
+Resolving deltas: 100% (41/41), done.
+[+] Once the RDP window opens, execute the following command in an Administrator cmd:
+
+============================================================
+powershell -c "cat \\tsclient\setup-uwu\osed-setup-win.ps1 | powershell -"
+============================================================
+
+[+] The SMB share is mounted at /tmp/tmp.VaBCSxBbh6 and will remain attached.
+[+] To unmount the SMB share and clean up the temporary files, press Ctrl+C or run the following command:
+============================================================
+rm -rf /tmp/tmp.VaBCSxBbh6
+============================================================
+Autoselecting keyboard map 'en-us' from locale
+```
+
+
+On Windows VM, open adminstrator cmd and
+```
+powershell -c "cat \\tsclient\setup-uwu\osed-setup-win.ps1 | powershell -"
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # osed-scripts
 bespoke tooling for offensive security's Windows Usermode Exploit Dev course (OSED)
 
