@@ -1,8 +1,18 @@
 # Quickstart local VM
 On Kali
 ```
-git clone https://github.com/chico1337/osce3.git; cd osce3/osed; chmod +x ./osed-setup-local.sh
-[+] Once SMB is mounted, run the following script on your windows VM in an administrator cmd n follow the instructions:
+git clone https://github.com/chico1337/osce3.git && cd osce3/osed && chmod +x ./osed-setup-local.sh && ./osed-setup-local.sh
+```
+```
+└─$ git clone https://github.com/chico1337/osce3.git && cd osce3/osed && chmod +x ./osed-setup-local.sh && ./osed-setup-local.sh
+Cloning into 'osce3'...
+remote: Enumerating objects: 113, done.
+remote: Counting objects: 100% (113/113), done.
+remote: Compressing objects: 100% (75/75), done.
+remote: Total 113 (delta 45), reused 65 (delta 21), pack-reused 0 (from 0)
+Receiving objects: 100% (113/113), 24.11 MiB | 10.80 MiB/s, done.
+Resolving deltas: 100% (45/45), done.
+[+] Once SMB is mounted, execute the following command in an Administrator cmd:
 
 ============================================================
 powershell -c "cat \\192.168.219.128\setup-uwu\osed-setup-win-local.ps1 | powershell -"
@@ -21,7 +31,7 @@ git clone https://github.com/chico1337/osce3.git; cd osce3/osed; chmod +x ./osed
 ```
 Results
 ```
-./osed-setup.sh $IP
+./osed-setup.sh $IP_WindowsVM
 [=] Cloning repository https://github.com/chico1337/osce3.git
 Cloning into 'osce3'...
 remote: Enumerating objects: 104, done.
